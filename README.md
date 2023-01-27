@@ -1,2 +1,2 @@
-# astrobot
+# Astrobot
 A simple modular general purpose bot for personal server
