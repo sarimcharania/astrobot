@@ -1,5 +1,26 @@
 # Astrobot
+
 A simple modular general purpose bot for personal server
+
+## Installation
+
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Create and activate a virtual environment.
+4. Install the required packages by running `pip install -r requirements.txt`.
+
+## Usage
+
+
+
+## Examples
+
+
+
+## License
+
+
+
 
 ## Module 1: Cricket Score Serant [Work in progress]
 This module is intended to display a live cricket score card in any text channel of the discord server when requested. Currently the api is liminted to free access of 100 hits per day, so score updates can only be done for one game per day with a refresh rate of 1 update per over. 
