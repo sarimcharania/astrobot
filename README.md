@@ -1,57 +1,83 @@
-# Astrobot
+# AstroBot
 
-A simple modular general purpose bot for personal server
+AstroBot is a Discord bot built using **C++** and the **D++ (DPP) library**.
 
-***
+## **Setup Instructions**
 
-## Installation
+### **1. Install Dependencies**
+Ensure you have **vcpkg** installed and properly set up. Then, install **DPP**:
 
-1. Clone the repository to your local machine.
-2. Navigate to the project directory.
-3. Create and activate a virtual environment.
-4. Install the required packages by running ```pip install -r requirements.txt```.
+```sh
+vcpkg install dpp:x64-windows
+```
 
-***
+or if you prefer a static library:
 
-## Usage
+```sh
+vcpkg install dpp:x64-windows-static
+```
 
-### Adding Astrobot to a Discord Server using an Invite Link
+### **2. Securely Storing the Bot Token**
+For security reasons, **DO NOT** hardcode the bot token in your source code. Instead, store it as an **environment variable**.
 
-To add Astrobot to your Discord server using an invite link, you can follow these steps:
+#### **On Windows (PowerShell)**
+```sh
+[System.Environment]::SetEnvironmentVariable("DISCORD_BOT_TOKEN", "your-bot-token-here", [System.EnvironmentVariableTarget]::User)
+```
+Then restart your terminal.
 
-1. The Astrobot bot owner will need to generate an invite link for the bot. You can ask them for this link, or they may have provided it to you already.
-2. Click on the invite link. This will take you to the Discord website and ask you to authorize the bot.
-3. Select the server you want to add Astrobot to from the drop-down menu, and click "Authorize". If you do not have the "Manage Server" permission for the server, you will not be able to add Astrobot to the server.
-4. Astrobot should now be added to your Discord server! You should see it listed in the list of members on the right-hand side of the Discord window.
+#### **On Windows (Command Prompt)**
+```sh
+setx DISCORD_BOT_TOKEN "your-bot-token-here"
+```
+Then restart your terminal.
 
-***
-## Examples
+#### **On Linux/macOS**
+```sh
+export DISCORD_BOT_TOKEN="your-bot-token-here"
+```
 
-***
+## **Handling Visual Studio Warnings (C4251)**
 
-## License
+When compiling with **DPP as a DLL**, you may see warnings like:
 
-***
+```
+warning C4251: 'std::string' needs to have dll-interface to be used by clients of 'dpp::user'
+```
 
+These warnings are harmless but can be suppressed.
 
-## Module 1: Cricket Score Serant [Work in progress]
-This module is intended to display a live cricket score card in any text channel of the discord server when requested. Currently the api is liminted to free access of 100 hits per day, so score updates can only be done for one game per day with a refresh rate of 1 update per over. 
+### **Option 1: Disable Warnings in Visual Studio (Recommended)**
+1. **Open Visual Studio**.
+2. **Right-click the project > Properties**.
+3. Go to **C/C++ > Command Line**.
+4. Add this to **Additional Options**:
+   ```
+   /wd4251
+   ```
+5. Click **OK**, then **Apply**.
 
-### Submodule 1: Hit Limiter
-To ensure that api does not exceed number of hits per day a token bucket system needs to be implemented with a token refil rate of 100 tokens per day. The API requests need to be coupled with a token_usage() function. Further more the run time token and capacity count need to be stored in a file that can be reffered to in case of app restarts. 
+### **Option 2: Use a Static DPP Build**
+If you don’t want to use DPP as a DLL, install the static version:
 
-### Submodule 2: Scorrer 
-1. Request score updates at exactly or approxiamately 1 update per over.
-        *TODO: Researh similar open source api's and their techniques. Think of the most optimized algorithm that ensures curcial and timely information delivery ith limited resources. (ML ?)
+```sh
+vcpkg install dpp:x64-windows-static
+```
 
-2. Post a message on the channel consisting of a summary of the current score and edit it wwith eah API hit. 
-        *TODO: Read eddit message documentation of the discord bot and implement it.
+Then, set your **Runtime Library** to **Multi-threaded (`/MT`)** in Visual Studio:
+1. **Go to Project Properties**.
+2. **Navigate to C/C++ > Code Generation**.
+3. Set **Runtime Library** to:
+   - **Multi-threaded (`/MT`)** for Release.
+   - **Multi-threaded Debug (`/MTd`)** for Debug.
+4. Click **OK**, then **Apply**.
 
-***
+## **Building and Running**
+Once everything is set up, build the project in **Visual Studio 2022**, and run the bot.
 
-## About
-The bot is deployed in development modes and if Master Charania is busy **not** doing batman stuff in areas without internet access Astrobot might be down. Sorry what? Is Master Charania batman? NO! Why'd you ask? This is a readme file not a press conference
+```sh
+./AstroBot.exe
+```
 
-***
+Your bot should now be online and running in your Discord server!
 
-### Auther: Sarim Charania

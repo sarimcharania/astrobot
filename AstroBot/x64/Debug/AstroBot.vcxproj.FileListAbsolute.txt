@@ -1,0 +1,12 @@
+C:\Users\sarim\source\repos\AstroBot\x64\Debug\dpp.dll
+C:\Users\sarim\source\repos\AstroBot\x64\Debug\libssl-3-x64.dll
+C:\Users\sarim\source\repos\AstroBot\x64\Debug\libcrypto-3-x64.dll
+C:\Users\sarim\source\repos\AstroBot\x64\Debug\opus.dll
+C:\Users\sarim\source\repos\AstroBot\x64\Debug\zlibd1.dll
+C:\Users\sarim\source\repos\AstroBot\AstroBot\x64\Debug\AstroBot.vcxproj.Up2Date
+C:\Users\sarim\OneDrive\Documents\Projects\astrobot\astrobot\x64\Debug\dpp.dll
+C:\Users\sarim\OneDrive\Documents\Projects\astrobot\astrobot\x64\Debug\libssl-3-x64.dll
+C:\Users\sarim\OneDrive\Documents\Projects\astrobot\astrobot\x64\Debug\libcrypto-3-x64.dll
+C:\Users\sarim\OneDrive\Documents\Projects\astrobot\astrobot\x64\Debug\opus.dll
+C:\Users\sarim\OneDrive\Documents\Projects\astrobot\astrobot\x64\Debug\zlibd1.dll
+C:\Users\sarim\OneDrive\Documents\Projects\astrobot\astrobot\AstroBot\x64\Debug\AstroBot.vcxproj.Up2Date

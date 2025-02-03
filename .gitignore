@@ -1,2 +1,12 @@
-# Config files 
-config.ini
+# Ignore build directories
+/debug/
+.release/
+.x64/
+.vs/
+*.log
+*.obj
+*.pdb
+*.exe
+*.dll
+*.lib
+*.env
