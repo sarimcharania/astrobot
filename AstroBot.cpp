@@ -4,9 +4,10 @@
 #include <iostream>
 #include <string>
 #include <dpp/dpp.h>
+#include <cstdlib>
 
 //Local Includes
-#include <Bot.h>
+#include "Bot.h"
 
 #pragma warning(disable : 4251)
 
@@ -48,6 +49,9 @@ int main() {
         std::cerr << "Error: DISCORD_BOT_TOKEN is not set!\n";
         return 1;
     }
+
+    //Test Pyhon script
+    std::system("python DeepSeekQuestionScript.py");
 
     //Create & Start the bot
     Bot::getInstance(sToken)->getClient().start(dpp::st_wait);

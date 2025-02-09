@@ -5,7 +5,7 @@
 Bot* Bot::instance = nullptr;
 
 // Private constructor
-Bot::Bot(const std::string& token) : mClient(token) 
+Bot::Bot(const std::string& token) : mClient(token, (dpp::i_all_intents))
 {
     // Set up logging for DPP events
     mClient.on_log(dpp::utility::cout_logger());

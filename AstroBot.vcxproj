@@ -136,14 +136,17 @@
     <ClCompile Include="AstroBot.cpp" />
     <ClCompile Include="Bot.cpp" />
     <ClCompile Include="BotLLMInterface.cpp" />
+    <ClCompile Include="DeepSeekWrapper.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config.env" />
+    <None Include="DeepSeekQuestionScript.py" />
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bot.h" />
     <ClInclude Include="BotLLMInterface.h" />
+    <ClInclude Include="DeepSeekWrapper.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

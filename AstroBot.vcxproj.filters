@@ -24,18 +24,25 @@
     <ClCompile Include="BotLLMInterface.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="DeepSeekWrapper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
     <None Include="config.env">
       <Filter>Resource Files</Filter>
     </None>
+    <None Include="DeepSeekQuestionScript.py" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bot.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BotLLMInterface.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DeepSeekWrapper.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

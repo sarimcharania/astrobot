@@ -10,3 +10,5 @@
 *.dll
 *.lib
 *.env
+*.tlog
+*.idb
